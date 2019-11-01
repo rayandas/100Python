@@ -11,6 +11,10 @@ D is the variable whose values should be input to your program in a comma-separa
 '''
 from math import *
 
+def calc(D):
+    return sqrt((2*C*D)/H)
+
+D = input().split(',')
 
 
 
