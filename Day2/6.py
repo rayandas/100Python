@@ -16,5 +16,6 @@ def calc(D):
 
 D = input().split(',')
 
+D = [int(i) for i in D]
 
 
