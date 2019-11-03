@@ -10,12 +10,14 @@ Following are the fixed values of C and H:
 D is the variable whose values should be input to your program in a comma-separated sequence.
 '''
 from math import *
+C,H = 50,30
 
 def calc(D):
     return sqrt((2*C*D)/H)
 
 D = input().split(',')
+D = [str(round(calc(int(i)))) for i in D]
 
-D = [int(i) for i in D]
+print(",".join(D))
 
 
