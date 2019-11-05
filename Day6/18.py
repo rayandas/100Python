@@ -10,6 +10,7 @@ Your program should accept a sequence of comma separated passwords and will chec
 Passwords that match the criteria are to be printed, each separated by a comma.
 '''
 
+'''
 def islow(x):
     for i in x:
         if i>='a' and i<='z':
@@ -44,4 +45,15 @@ for i in pwd:
 
 #print(",".join(lst))
 print(lst)
+'''
+
+import re
+pwd = input().split(',')
+lst = []
+for i in pwd:
+    l = len(i)
+    if l>=6 and l<=12 and bool(re.search("[0-9]")) and bool(re.search("[a-z]",i)) and bool(re.search("[A-Z]",i)) and bool(re.search("[@#$]",i)):
+        lst.append(i)
+
+print(",".join(lst))
         
